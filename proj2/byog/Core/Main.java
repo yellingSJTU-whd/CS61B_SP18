@@ -12,12 +12,12 @@ public class Main {
             System.out.println("Can only have one argument - the input string");
             System.exit(0);
         } else if (args.length == 1) {
-            Game game = new Game();
-            TETile[][] worldState = game.playWithInputString(args[0]);
+            Engine engine = new Engine();
+            TETile[][] worldState = engine.playWithInputString(args[0]);
             System.out.println(TETile.toString(worldState));
         } else {
-            Game game = new Game();
-            game.playWithKeyboard();
+            Engine engine = new Engine();
+            engine.playWithKeyboard();
         }
     }
 }
